@@ -1,12 +1,20 @@
 #include <iostream>
 #include <queue>
 using namespace std;
-
 /* 0 = not colored
    1 = Red
    -1 = Blue
 */
-
+void io()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+}
 bool isBipartite(int **g, int n, int s)
 {
     queue<int> q;
@@ -37,6 +45,7 @@ bool isBipartite(int **g, int n, int s)
 
 int main()
 {
+    io();
     int n;
     scanf("%d", &n);
     int **g = new int *[n];

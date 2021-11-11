@@ -1,0 +1,2 @@
+For values  INF enter -1
+Weight of the shortest path is 3

@@ -3,39 +3,39 @@
 #include<set>
 #include<algorithm>
 using namespace std;
-void io()
+void basics()
 {
-    #ifndef ONLINE_JUDGE
+#ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
-    #endif
+#endif
 }
 void solve()
 {
     int n;
-    cin>>n;
+    cin >> n;
     vector<int> arr(n);
-    for(int i=0;i<n;i++)
-    cin>>arr[i];
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
     int key;
-    cin>>key;
-    int ans=0;
-    for(int i=0;i<n-1;i++)
+    cin >> key;
+    int ans = 0;
+    for (int i = 0; i < n - 1; i++)
     {
-        for(int j=i+1;j<n;j++)
+        for (int j = i + 1; j < n; j++)
         {
-            if(abs(arr[i]-arr[j])==key)
-            ans++;
+            if (abs(arr[i] - arr[j]) == key)
+                ans++;
         }
     }
-    cout<<ans<<endl;
+    cout << ans << endl;
 }
 int main()
 {
-    io();
+    basics();
     int t;
-    cin>>t;
-    while(t--)
+    cin >> t;
+    while (t--)
     {
         solve();
     }

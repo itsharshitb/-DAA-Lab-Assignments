@@ -1,6 +1,15 @@
-#include <iostream>
-#include <stack>
+#include <bits/stdc++.h>
 using namespace std;
+void io()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+}
 bool dfs(int **g, int n, int source, int dest)
 {
     stack<int> s;
@@ -27,9 +36,9 @@ bool dfs(int **g, int n, int source, int dest)
     }
     return false;
 }
-
 int main()
 {
+    io();
     int n;
     scanf("%d", &n);
     int **g = new int *[n];

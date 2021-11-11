@@ -5,7 +5,7 @@ swaps required.
 */
 #include<iostream>
 using namespace std;
-void io()
+void basics()
 {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
@@ -45,7 +45,7 @@ void solve ()
 }
 int main()
 {
-    io();
+    basics();
     int t;
     cin >> t;
     while (t--)
